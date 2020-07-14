@@ -28,18 +28,24 @@ class SimpleWidget extends StatefulWidget{
 class _SimpleWidgetState extends State<SimpleWidget>{
   int _count = 0;
 
-  void _handleButton(){
-    setState(() {
-      _count++;
-    });
+  void _handleButton(bool param){
+    if(param == true){
+      setState(() {
+        _count++;
+      });
+    }
+    else{
+      setState(() {
+        _count--;
+      });
+    }
+
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Colors.green,
-      height: 300,
-      width: 300,
       alignment: Alignment.center,
       child: Center(
         child: Column(
@@ -47,8 +53,12 @@ class _SimpleWidgetState extends State<SimpleWidget>{
           children: <Widget>[
             Text('$_count'),
             RaisedButton(
-              onPressed: (){_handleButton();},
-              child: Text('Click me'),
+              onPressed: (){_handleButton(true);},
+              child: Text('Click to add'),
+            ),
+            RaisedButton(
+              onPressed: (){_handleButton(false);},
+              child: Text('Click to min'),
             )
           ],
         ),
