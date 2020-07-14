@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 //import 'test_file.dart';
 //import 'row_coloum.dart';
-import 'myContainer.dart';
+//import 'myContainer.dart';
+import 'flex.dart';
 
 void main() => runApp(ScreenWidget());
 
@@ -13,7 +14,7 @@ class ScreenWidget extends StatelessWidget {
     return MaterialApp(
       title: 'English_Quiz!',
       theme: ThemeData(primaryColor: Colors.amber),
-      home: MyContainerClass(),
+      home: MyFlex(),
     );
   }
 }
