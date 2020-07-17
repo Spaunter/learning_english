@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:google_fonts/google_fonts.dart';
 //import 'test_file.dart';
 //import 'row_coloum.dart';
 //import 'myContainer.dart';
@@ -14,10 +15,13 @@ class ScreenWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'English_Quiz!',
-      theme: ThemeData(primaryColor: Colors.amber),
+      theme: ThemeData(
+        primarySwatch: Colors.indigo,
+        textTheme: GoogleFonts.openSansCondensedTextTheme(
+          Theme.of(context).textTheme,
+        ),
+      ),
       home: HomePage(),
     );
   }
 }
-
-
